@@ -1,16 +1,16 @@
 -- MEDICO 
---Ingresar(nombre, especialidad, años_de_experiencia)
+--Ingresar(nombre, especialidad, aÃ±os_de_experiencia)
 EXECUTE medico_ops.nuevo_medico('Filino de Cos', 'Neurologia',dbms_random.value(1,40));
 EXECUTE medico_ops.nuevo_medico('Calcideo', 'Traumatologia',dbms_random.value(1,40));
-EXECUTE medico_ops.nuevo_medico( 'Calímaco', 'Neurologia',dbms_random.value(1,40));
+EXECUTE medico_ops.nuevo_medico( 'CalÃ­maco', 'Neurologia',dbms_random.value(1,40));
 EXECUTE medico_ops.nuevo_medico('Cares de Atenas', 'Neumologia',dbms_random.value(1,40));
-EXECUTE medico_ops.nuevo_medico('Fainarate', 'Odontología',dbms_random.value(1,40));
+EXECUTE medico_ops.nuevo_medico('Fainarate', 'OdontologÃ­a',dbms_random.value(1,40));
 EXECUTE medico_ops.nuevo_medico('Hercules', 'Psicologia',dbms_random.value(1,40));
 
---Si el medico con id 6 quiere cambiar su especialidad y actualizar sus años de experiencia
-EXECUTE medico_ops.modificar_medico(6,'Odontología',15);
+--Si el medico con id 6 quiere cambiar su especialidad y actualizar sus aÃ±os de experiencia
+EXECUTE medico_ops.modificar_medico(6,'OdontologÃ­a',15);
 --Medico con id erroneo
-EXECUTE medico_ops.modificar_medico(100,'Odontología',15);
+EXECUTE medico_ops.modificar_medico(100,'OdontologÃ­a',15);
 
 --Eliminar medico con id 6
 EXECUTE medico_ops.borrar_medico(6);
@@ -28,7 +28,7 @@ EXECUTE paciente_ops.ingresa_paciente (null,2,'Chester Short','Apdo.:163-7179 Im
 EXECUTE paciente_ops.ingresa_paciente (null,2,'Brianna C. Lewis','496-3649 Nec Av.',dbms_random.value(1,115));
 EXECUTE paciente_ops.ingresa_paciente (null,4,'Zeus C. Irwin','331-5216 Nonummy C/',dbms_random.value(1,115));
 EXECUTE paciente_ops.ingresa_paciente (null,5,'Jermaine Conrad','9893 Lorem, C.',dbms_random.value(1,115));
-EXECUTE paciente_ops.ingresa_paciente (null,5,'Baxter Castillo','Apartado núm.: 155, 6615 Quam. C/',dbms_random.value(1,115));
+EXECUTE paciente_ops.ingresa_paciente (null,5,'Baxter Castillo','Apartado nÃºm.: 155, 6615 Quam. C/',dbms_random.value(1,115));
 EXECUTE paciente_ops.ingresa_paciente (null,5,'Flynn D. Silva','452-3649 Nec Av.',dbms_random.value(1,115));
 
 -- PACIENTE (paciente_id, medico_id, direccion)
@@ -47,35 +47,35 @@ SELECT * FROM paciente;
 
 
 
--- COMPAÑIA FARMACEUTICA 
+-- COMPAÃ‘IA FARMACEUTICA 
 --ingresar (nombre, telefono)
-EXECUTE comp_farm_ops.nueva_compañia('Química Suiza S.A.',2114000);
-EXECUTE comp_farm_ops.nueva_compañia('Lansier',3328302);
-EXECUTE comp_farm_ops.nueva_compañia('Hersil S.A',7133333);
-EXECUTE comp_farm_ops.nueva_compañia('Hospira',2114034);
-EXECUTE comp_farm_ops.nueva_compañia('Grünenthal Peruana',2241727);
-EXECUTE comp_farm_ops.nueva_compañia('DUBONP S.A.',2211588);
-EXECUTE comp_farm_ops.nueva_compañia('Bayer S.A.',2113800);
-EXECUTE comp_farm_ops.nueva_compañia('TECNOFARMA',70003000);
-EXECUTE comp_farm_ops.nueva_compañia('Genomma Lab',554300);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('QuÃ­mica Suiza S.A.',2114000);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('Lansier',3328302);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('Hersil S.A',7133333);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('Hospira',2114034);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('GrÃ¼nenthal Peruana',2241727);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('DUBONP S.A.',2211588);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('Bayer S.A.',2113800);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('TECNOFARMA',70003000);
+EXECUTE comp_farm_ops.nueva_compaÃ±ia('Genomma Lab',554300);
 
---Si la compañia Farmaceutica con id 9 quiere cambiar de nombre y actualizar su numero de telefono
-EXECUTE comp_farm_ops.modificar_compañia(9,'Laboratorio Genomma',927395123);
---Modificar compañia Farmaceutica con id erronero
-EXECUTE comp_farm_ops.modificar_compañia(50,'Química Suiza S.A.',927395123);
+--Si la compaÃ±ia Farmaceutica con id 9 quiere cambiar de nombre y actualizar su numero de telefono
+EXECUTE comp_farm_ops.modificar_compaÃ±ia(9,'Laboratorio Genomma',927395123);
+--Modificar compaÃ±ia Farmaceutica con id erronero
+EXECUTE comp_farm_ops.modificar_compaÃ±ia(50,'QuÃ­mica Suiza S.A.',927395123);
 
---eliminar compañia Farmaceutica con id 9
-EXECUTE comp_farm_ops.eliminar_compañia(9)
---eliminar compañia Farmaceutica con id erroneo
-EXECUTE comp_farm_ops.eliminar_compañia(90)
+--eliminar compaÃ±ia Farmaceutica con id 9
+EXECUTE comp_farm_ops.eliminar_compaÃ±ia(9)
+--eliminar compaÃ±ia Farmaceutica con id erroneo
+EXECUTE comp_farm_ops.eliminar_compaÃ±ia(90)
 
-SELECT * FROM compañia_farmaceutica;
-
-
+SELECT * FROM compaÃ±ia_farmaceutica;
 
 
--- MEDICAMENTO (compañiaf_id,nombrecomercial,formula)
---Ingresar (compañiaf_id,nombrecomercial,formula)
+
+
+-- MEDICAMENTO (compaÃ±iaf_id,nombrecomercial,formula)
+--Ingresar (compaÃ±iaf_id,nombrecomercial,formula)
 EXECUTE medicamento_ops.nuevo_medicamento(1, 'Fluoruro de sodio','Comprimido');
 EXECUTE medicamento_ops.nuevo_medicamento(1, 'Ranitidina','Inyectable');
 EXECUTE medicamento_ops.nuevo_medicamento(2, 'Sucralfato','Liquido oral');
@@ -86,20 +86,20 @@ EXECUTE medicamento_ops.nuevo_medicamento(4, 'Metformina','Comprimido');
 EXECUTE medicamento_ops.nuevo_medicamento(5, 'Glimepirida','Comprimido');
 EXECUTE medicamento_ops.nuevo_medicamento(5, 'Metformina + rosiglitazona','Comprimido');
 EXECUTE medicamento_ops.nuevo_medicamento(6, 'Repaglinida','Comprimido');
-EXECUTE medicamento_ops.nuevo_medicamento(7, 'Tocoferol','Cápsula blanda');
-EXECUTE medicamento_ops.nuevo_medicamento(7, 'Retinol','Cápsula blanda');
+EXECUTE medicamento_ops.nuevo_medicamento(7, 'Tocoferol','CÃ¡psula blanda');
+EXECUTE medicamento_ops.nuevo_medicamento(7, 'Retinol','CÃ¡psula blanda');
 EXECUTE medicamento_ops.nuevo_medicamento(7, 'Warfarina','Comprimido');
-EXECUTE medicamento_ops.nuevo_medicamento(8, 'Heparina sódica','Inyectable');
-EXECUTE medicamento_ops.nuevo_medicamento(3, 'Metoclopramida','Líquido oral');
+EXECUTE medicamento_ops.nuevo_medicamento(8, 'Heparina sÃ³dica','Inyectable');
+EXECUTE medicamento_ops.nuevo_medicamento(3, 'Metoclopramida','LÃ­quido oral');
 
---id compañia, nombre antiguo, nombre nuevo, nueva formula
+--id compaÃ±ia, nombre antiguo, nombre nuevo, nueva formula
 EXECUTE medicamento_ops.modificar_medicamento(3,'Metoclopramida','Meta','Inyectable');
---Modificando un medicamento de una compañia que no existe
+--Modificando un medicamento de una compaÃ±ia que no existe
 EXECUTE medicamento_ops.modificar_medicamento(50,'Metoclopramida','Meta','Inyectable');
 
---Eliminando un medicamento con id compañia 3 y nombrecomercial Meta
+--Eliminando un medicamento con id compaÃ±ia 3 y nombrecomercial Meta
 EXECUTE medicamento_ops.eliminar_medicamento(3,'Meta');
---Eliminando un medicamento con id compañia inexistente
+--Eliminando un medicamento con id compaÃ±ia inexistente
 EXECUTE medicamento_ops.eliminar_medicamento(30,'Meta');
 
 SELECT * FROM MEDICAMENTO;
@@ -134,7 +134,7 @@ SELECT * FROM farmacia;
 
 
 
--- CONTRATO (compañiaf_id,farmacia_id,fechainicio,fechafin,texto, nombresupervisor)
+-- CONTRATO (compaÃ±iaf_id,farmacia_id,fechainicio,fechafin,texto, nombresupervisor)
 EXECUTE contrato_ops.ingresa_contrato(4, 2, '01-03-2015', '01-01-2021', 'TextoA','Flynn D. Silva');
 EXECUTE contrato_ops.ingresa_contrato(5, 1, '11-06-2013', '15-12-2021', 'TextoB','Mona Wilkins');
 EXECUTE contrato_ops.ingresa_contrato(7, 5, '12-12-2015', '14-01-2024', 'TextoC','Jade H. Bray');
@@ -166,10 +166,10 @@ SELECT * FROM contrato;
 
 
 -- STOCK 
--- Ingresar FARMACIA_ID,NOMBRECOMERCIAL,COMPAÑIAF_ID,PRECIO,CANTIDAD
+-- Ingresar FARMACIA_ID,NOMBRECOMERCIAL,COMPAÃ‘IAF_ID,PRECIO,CANTIDAD
 EXECUTE stock_ops.nuevo_stock(1,'Glimepirida',5,15,6);
 EXECUTE stock_ops.nuevo_stock(5,'Retinol',7,15,10);
-EXECUTE stock_ops.nuevo_stock(7,'Heparina sódica',8,5,18);
+EXECUTE stock_ops.nuevo_stock(7,'Heparina sÃ³dica',8,5,18);
 EXECUTE stock_ops.nuevo_stock(2,'Fluoruro de sodio',1,12,100);
 EXECUTE stock_ops.nuevo_stock(3,'Fluoruro de sodio',1,15,20);
 EXECUTE stock_ops.nuevo_stock(4,'Fluoruro de sodio',1,17,90);
@@ -179,9 +179,9 @@ EXECUTE stock_ops.nuevo_stock(1,'Sucralfato',2,15,10);
 EXECUTE stock_ops.nuevo_stock(1,'Repaglinida',6,1,100);
 EXECUTE stock_ops.nuevo_stock(1,'Domperidona',3,17,90);
 EXECUTE stock_ops.nuevo_stock(1,'Metformina',4,18,80);
-EXECUTE stock_ops.nuevo_stock(1,'Heparina sódica',8,20,80);
+EXECUTE stock_ops.nuevo_stock(1,'Heparina sÃ³dica',8,20,80);
 
---Ingresando un nuevo stock a una farmacia y compañia farmaceutica que no tienen contrato
+--Ingresando un nuevo stock a una farmacia y compaÃ±ia farmaceutica que no tienen contrato
 EXECUTE stock_ops.nuevo_stock(7,'Glimepirida',5,15,100);
 
 --Modificando el STOCK de ID 32 Actulizando su precio y luego su cantidad
@@ -231,7 +231,7 @@ EXECUTE ventas_ops.elimina_venta(50,null)
 
 -- LINEA DE VENTA 
 --Ingresar
---ventaID stockid, ventaID, FARMID, NombreComercial, CompañiaID, PrecioLV, cannt
+--ventaID stockid, ventaID, FARMID, NombreComercial, CompaÃ±iaID, PrecioLV, cannt
 EXECUTE lineaventa_ops.ingresa_lv(9,7,1,'Sucralfato',2,15,2);
 EXECUTE lineaventa_ops.ingresa_lv(11,8,1,'Domperidona',3,17,2);
 EXECUTE lineaventa_ops.ingresa_lv(12,4,1,'Metformina',4,18,2);
@@ -281,7 +281,7 @@ EXECUTE lineaventa_ops.elimina_lv(26)
 
 
 
--- RECETA (medico_id, paciente_id, nombrecomercial, compañiaf_id, fecha, cantidad)
+-- RECETA (medico_id, paciente_id, nombrecomercial, compaÃ±iaf_id, fecha, cantidad)
 --Registar Receta
 EXECUTE receta_ops.ingresa_receta(2,1,'Glimepirida',5,to_date(sysdate,'YYYY/MM/DD:HH:MI:SSAM'), 2);
 EXECUTE receta_ops.ingresa_receta(3,2,'Tocoferol',7,to_date(sysdate,'YYYY/MM/DD:HH:MI:SSAM'), 1);
@@ -299,7 +299,7 @@ SELECT * FROM receta;
 
 
 
---Dada una farmacia, mostrar la información de sus contratos. 
+--Dada una farmacia, mostrar la informaciÃ³n de sus contratos. 
 DECLARE 
     c_codigofarmacia contrato.Farmacia_ID%TYPE := &codigo;
 BEGIN
@@ -308,27 +308,27 @@ END;
 
 
 
---Dada una compañia farmaceutica, mostrar la información de sus contratos. (tabla contratos)
+--Dada una compaÃ±ia farmaceutica, mostrar la informaciÃ³n de sus contratos. (tabla contratos)
 DECLARE 
-    c_codigocompannia contrato.compañiaf_id%TYPE := &codigo;
+    c_codigocompannia contrato.compaÃ±iaf_id%TYPE := &codigo;
 BEGIN
-    mostrardatos_ops.mostrarcontratoscompañia(c_codigocompannia);
+    mostrardatos_ops.mostrarcontratoscompaÃ±ia(c_codigocompannia);
 END;
 
 
 
 
---Dada una compañía farmacéutica, mostrar la lista sus medicamentos.(tabla stock)
+--Dada una compaÃ±Ã­a farmacÃ©utica, mostrar la lista sus medicamentos.(tabla stock)
 DECLARE 
-    s_codigocomp stock.CompañiaF_ID%TYPE := &codigo;
+    s_codigocomp stock.CompaÃ±iaF_ID%TYPE := &codigo;
 BEGIN
-     mostrarDatos_ops.mostrarMedicamentosCompañia(s_codigocomp);
+     mostrarDatos_ops.mostrarMedicamentosCompaÃ±ia(s_codigocomp);
 END;
 
 
 
 
---Dada una farmacia, mostrar la lista de sus medicamentos junto con la compañía farmacéutica a la que pertenecen. (tabla stock)
+--Dada una farmacia, mostrar la lista de sus medicamentos junto con la compaÃ±Ã­a farmacÃ©utica a la que pertenecen. (tabla stock)
 DECLARE 
     s_farmacodigo stock.Farmacia_ID%TYPE := &codigo;
 BEGIN
