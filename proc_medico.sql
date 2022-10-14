@@ -3,7 +3,7 @@ create or replace PACKAGE medico_ops AS
     PROCEDURE nuevo_medico(
     v_nombre medico.nombre%TYPE,
     v_especialidad medico.especialidad%TYPE,
-    v_exp medico.años_experiencia%TYPE);
+    v_exp medico.aÃ±os_experiencia%TYPE);
 
     --eliminar un medico
     PROCEDURE borrar_medico(
@@ -13,7 +13,7 @@ create or replace PACKAGE medico_ops AS
     PROCEDURE modificar_medico(
     v_medico_id medico.medico_id%TYPE,
     v_especialidad medico.especialidad%TYPE,
-    v_exp medico.años_experiencia%TYPE);
+    v_exp medico.aÃ±os_experiencia%TYPE);
 
 END medico_ops;
 
@@ -24,10 +24,10 @@ create or replace PACKAGE BODY medico_ops AS
     PROCEDURE nuevo_medico(
     v_nombre medico.nombre%TYPE,
     v_especialidad medico.especialidad%TYPE,
-    v_exp medico.años_experiencia%TYPE)
+    v_exp medico.aÃ±os_experiencia%TYPE)
     IS
     BEGIN 
-        INSERT INTO medico (nombre,especialidad,años_experiencia)
+        INSERT INTO medico (nombre,especialidad,aÃ±os_experiencia)
         VALUES(v_nombre,v_especialidad,v_exp);
         DBMS_OUTPUT.PUT_LINE('Medico Registrado Correctamente ');
     END nuevo_medico;
@@ -57,7 +57,7 @@ create or replace PACKAGE BODY medico_ops AS
     PROCEDURE modificar_medico(
     v_medico_id medico.medico_id%TYPE,
     v_especialidad medico.especialidad%TYPE,
-    v_exp medico.años_experiencia%TYPE)
+    v_exp medico.aÃ±os_experiencia%TYPE)
     AS no_existe_medico EXCEPTION;
         c number;
     BEGIN
@@ -67,7 +67,7 @@ create or replace PACKAGE BODY medico_ops AS
         IF(c=1)THEN
             UPDATE medico 
             SET especialidad = v_especialidad,
-                años_experiencia = v_exp
+                aÃ±os_experiencia = v_exp
             WHERE medico_id = v_medico_id;  
             DBMS_OUTPUT.PUT_LINE('Medico modificado');
         ELSE
