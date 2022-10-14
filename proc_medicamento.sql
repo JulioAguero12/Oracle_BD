@@ -1,18 +1,18 @@
 CREATE OR REPLACE PACKAGE medicamento_ops AS
     --agregar medicamento
     PROCEDURE nuevo_medicamento(
-    f_medComp_id medicamento.CompaaF_id%TYPE,
+    f_medComp_id medicamento.CompaﾃｱiaF_id%TYPE,
     f_nomCom medicamento.NombreComercial%TYPE,
     f_formula medicamento.formula%TYPE);
     
     --eliminar medicamento
     PROCEDURE eliminar_medicamento(
-    f_medComp_id medicamento.CompaaF_id%TYPE,
+    f_medComp_id medicamento.CompaﾃｱiaF_id%TYPE,
     f_nomCom medicamento.NombreComercial%TYPE);
     
     --modificar medicamento
     PROCEDURE modificar_medicamento(
-    f_medComp_id medicamento.CompaaF_id%TYPE,
+    f_medComp_id medicamento.CompaﾃｱiaF_id%TYPE,
     f_nomCom medicamento.NombreComercial%TYPE,
     f_nuevoNomCom medicamento.NombreComercial%TYPE,
     f_formula medicamento.formula%TYPE);
@@ -23,74 +23,74 @@ END medicamento_ops;
 CREATE OR REPLACE PACKAGE BODY medicamento_ops AS
 
     PROCEDURE nuevo_medicamento(
-        f_medComp_id medicamento.CompaaF_id%TYPE,
+        f_medComp_id medicamento.CompaﾃｱiaF_id%TYPE,
         f_nomCom medicamento.NombreComercial%TYPE,
         f_formula medicamento.formula%TYPE)
     AS
-        no_existe_compaa EXCEPTION;
+        no_existe_compaﾃｱia EXCEPTION;
         c number; 
     BEGIN
-        select count(*) into c from COMPAﾑIA_FARMACEUTICA
-        where COMPAﾑIAF_ID = f_medComp_id; 
+        select count(*) into c from COMPAﾃ選A_FARMACEUTICA
+        where COMPAﾃ選AF_ID = f_medComp_id; 
         IF(c=1)THEN
-            INSERT INTO medicamento(CompaaF_id,NombreComercial,formula)
+            INSERT INTO medicamento(CompaﾃｱiaF_id,NombreComercial,formula)
             VALUES(f_medComp_id,f_nomCom,f_formula);
            dbms_output.put_line('Medicamento Registrado Correctamente'); 
         ELSE
-            RAISE no_existe_compaa;
+            RAISE no_existe_compaﾃｱia;
         END IF;      
         EXCEPTION
-            WHEN no_existe_compaa THEN
-                dbms_output.put_line('No existe la Compaa Farmaceutica');
+            WHEN no_existe_compaﾃｱia THEN
+                dbms_output.put_line('No existe la Compaﾃｱia Farmaceutica');
     END nuevo_medicamento;
     
     --eliminar medicamento
     PROCEDURE eliminar_medicamento (
-        f_medComp_id medicamento.CompaaF_id%TYPE,
+        f_medComp_id medicamento.CompaﾃｱiaF_id%TYPE,
         f_nomCom medicamento.NombreComercial%TYPE)
     AS
-       no_existe_compaa EXCEPTION;
+       no_existe_compaﾃｱia EXCEPTION;
        c number;
     BEGIN
         c:=0;
         select count(*) into c from MEDICAMENTO 
-        where COMPAﾑIAF_ID = f_medComp_id AND NOMBRECOMERCIAL = f_nomCom;
+        where COMPAﾃ選AF_ID = f_medComp_id AND NOMBRECOMERCIAL = f_nomCom;
         IF(c=1)THEN
             DELETE FROM MEDICAMENTO
-            WHERE COMPAﾑIAF_ID = f_medComp_id AND NOMBRECOMERCIAL = f_nomCom;
+            WHERE COMPAﾃ選AF_ID = f_medComp_id AND NOMBRECOMERCIAL = f_nomCom;
             dbms_output.put_line('Medicamento eliminado');
         ELSE
-            RAISE no_existe_compaa;
+            RAISE no_existe_compaﾃｱia;
         END IF;
         
         EXCEPTION
-            WHEN no_existe_compaa THEN
+            WHEN no_existe_compaﾃｱia THEN
                 dbms_output.put_line('No existe el medicamento');
     END eliminar_medicamento;
  
     --modificar medicamento
     PROCEDURE modificar_medicamento (
-        f_medComp_id medicamento.CompaaF_id%TYPE,
+        f_medComp_id medicamento.CompaﾃｱiaF_id%TYPE,
         f_nomCom medicamento.NombreComercial%TYPE,
         f_nuevoNomCom medicamento.NombreComercial%TYPE,
         f_formula medicamento.formula%TYPE)
     AS
-        no_existe_compaa EXCEPTION;
+        no_existe_compaﾃｱia EXCEPTION;
        c number;
     BEGIN
         c:=0;
-        select count(*) into c from COMPAﾑIA_FARMACEUTICA
-        where COMPAﾑIAF_ID = f_medComp_id;   
+        select count(*) into c from COMPAﾃ選A_FARMACEUTICA
+        where COMPAﾃ選AF_ID = f_medComp_id;   
         IF(c=1)THEN
              UPDATE medicamento
             SET NombreComercial = f_NuevoNomCom, formula = f_formula
-            WHERE NombreComercial = f_nomCom AND CompaaF_ID = f_medComp_id;
+            WHERE NombreComercial = f_nomCom AND CompaﾃｱiaF_ID = f_medComp_id;
             dbms_output.put_line('Medicamento modificado');
         ELSE
-            RAISE no_existe_compaa;
+            RAISE no_existe_compaﾃｱia;
         END IF;      
         EXCEPTION
-            WHEN no_existe_compaa THEN
+            WHEN no_existe_compaﾃｱia THEN
                 dbms_output.put_line('Medicamento no existente');
     END modificar_medicamento;
     
