@@ -2,7 +2,7 @@
 
 CREATE OR REPLACE PACKAGE contrato_ops AS
     PROCEDURE ingresa_contrato (
-        compf_id   contrato.compañiaf_id%TYPE,
+        compf_id   contrato.compaÃ±iaf_id%TYPE,
         farm_id    contrato.farmacia_id%TYPE,
         fechai     contrato.fechainicio%TYPE,
         fechaf     contrato.fechafin%TYPE,
@@ -11,13 +11,13 @@ CREATE OR REPLACE PACKAGE contrato_ops AS
     );
 
     PROCEDURE modifica_contrato (
-        compf_id   contrato.compañiaf_id%TYPE,
+        compf_id   contrato.compaÃ±iaf_id%TYPE,
         farm_id    contrato.farmacia_id%TYPE,
         supv       contrato.nombre_supervisor%TYPE
     );
 
     PROCEDURE elimina_contrato (
-        compf_id   contrato.compañiaf_id%TYPE,
+        compf_id   contrato.compaÃ±iaf_id%TYPE,
         farm_id    contrato.farmacia_id%TYPE
     );
 
@@ -29,21 +29,21 @@ CREATE OR REPLACE PACKAGE BODY contrato_ops AS
     
     
     PROCEDURE ingresa_contrato (
-        compf_id   contrato.compañiaf_id%TYPE,
+        compf_id   contrato.compaÃ±iaf_id%TYPE,
         farm_id    contrato.farmacia_id%TYPE,
         fechai     contrato.fechainicio%TYPE,
         fechaf     contrato.fechafin%TYPE,
         text       contrato.texto%TYPE,
         supv       contrato.nombre_supervisor%TYPE
     ) AS
-        noexistecompañia EXCEPTION;
+        noexistecompaÃ±ia EXCEPTION;
         noexistefarmacia EXCEPTION;
         c number;
         d number;
         
     BEGIN
-        select count(*) into c from COMPAÑIA_FARMACEUTICA
-        where COMPAÑIAF_ID = compf_id; 
+        select count(*) into c from COMPAÃ‘IA_FARMACEUTICA
+        where COMPAÃ‘IAF_ID = compf_id; 
         IF(c=1)THEN
             INSERT INTO contrato VALUES (
                 compf_id,
@@ -55,15 +55,15 @@ CREATE OR REPLACE PACKAGE BODY contrato_ops AS
             );
            dbms_output.put_line('Contrato Registrado Correctamente'); 
         ELSE
-            RAISE noexistecompañia;
+            RAISE noexistecompaÃ±ia;
         END IF;      
         EXCEPTION
-            WHEN noexistecompañia THEN
-                dbms_output.put_line('No existe la Compañia Farmaceutica');     
+            WHEN noexistecompaÃ±ia THEN
+                dbms_output.put_line('No existe la CompaÃ±ia Farmaceutica');     
     END ingresa_contrato;
     
     PROCEDURE modifica_contrato (
-        compf_id   contrato.compañiaf_id%TYPE,
+        compf_id   contrato.compaÃ±iaf_id%TYPE,
         farm_id    contrato.farmacia_id%TYPE,
         supv       contrato.nombre_supervisor%TYPE
     ) IS
@@ -72,13 +72,13 @@ CREATE OR REPLACE PACKAGE BODY contrato_ops AS
     BEGIN
     
         c:=0;
-        select count(*) into c from contrato where compañiaf_id=compf_id and farmacia_id=farm_id;
+        select count(*) into c from contrato where compaÃ±iaf_id=compf_id and farmacia_id=farm_id;
         IF(c=1)THEN
         UPDATE contrato
         SET
             nombre_supervisor = supv
         WHERE
-            compañiaf_id = compf_id
+            compaÃ±iaf_id = compf_id
             AND farmacia_id = farm_id;
         ELSE
             RAISE noexistecontrato;
@@ -90,18 +90,18 @@ CREATE OR REPLACE PACKAGE BODY contrato_ops AS
     END modifica_contrato;
 
     PROCEDURE elimina_contrato (
-        compf_id   contrato.compañiaf_id%TYPE,
+        compf_id   contrato.compaÃ±iaf_id%TYPE,
         farm_id    contrato.farmacia_id%TYPE
     ) AS
        noexistecontrato EXCEPTION;
        c number;
     BEGIN
         c:=0;
-        select count(*) into c from contrato where compañiaf_id=compf_id and farmacia_id=farm_id;
+        select count(*) into c from contrato where compaÃ±iaf_id=compf_id and farmacia_id=farm_id;
         IF(c=1)THEN
             DELETE FROM contrato
             WHERE
-            compañiaf_id = compf_id
+            compaÃ±iaf_id = compf_id
             AND farmacia_id = farm_id;
             dbms_output.put_line('contrato eliminado');
         ELSE
