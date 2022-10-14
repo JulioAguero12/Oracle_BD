@@ -4,7 +4,7 @@ CREATE OR REPLACE PACKAGE lineaventa_ops AS
         ventaID lineaventa.venta_id%type, 
         farmID lineaventa.farmacia_id%type, 
         nombreComercial lineaventa.nombrecomercial%type,
-        companiaID lineaventa.compañiaf_id%type, 
+        companiaID lineaventa.compaÃ±iaf_id%type, 
         preciolv lineaventa.precio%type, 
         cant lineaventa.cntvendida%type
     );
@@ -29,7 +29,7 @@ CREATE OR REPLACE PACKAGE BODY lineaventa_ops AS
         ventaID lineaventa.venta_id%type, 
         farmID lineaventa.farmacia_id%type, 
         nombreComercial lineaventa.nombrecomercial%type,
-        companiaID lineaventa.compañiaf_id%type, 
+        companiaID lineaventa.compaÃ±iaf_id%type, 
         preciolv lineaventa.precio%type, 
         cant lineaventa.cntvendida%type
     ) AS
@@ -39,7 +39,7 @@ CREATE OR REPLACE PACKAGE BODY lineaventa_ops AS
         select count(*) into c from FARMACIA
         where FARMACIA_ID = farmID; 
         IF(c=1)THEN
-            insert into lineaventa(STOCK_ID,VENTA_ID,FARMACIA_ID,NOMBRECOMERCIAL,COMPAÑIAF_ID,PRECIO,CNTVENDIDA)
+            insert into lineaventa(STOCK_ID,VENTA_ID,FARMACIA_ID,NOMBRECOMERCIAL,COMPAÃ‘IAF_ID,PRECIO,CNTVENDIDA)
             values(STOCKID,ventaID, farmID, nombreComercial, companiaID, preciolv, cant);
            dbms_output.put_line('Linea de Venta Registrada Correctamente'); 
         ELSE
