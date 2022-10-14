@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>Proyecto_BD2</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="76a5fd7d-f123-4560-91c1-3dd23b69747a" name="Medicos" objectType="TABLE" physicalName="Medicos" >
+   <remarks></remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="86e77502-dac2-450d-9575-886c85b949dd" autoIncrement="true" autoIncrementSequenceName="Medicos_Med_Id_seq" defaultValue="" name="Med_Id" nullable="0" physicalName="Med_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="9d11aa7c-a57f-4975-b427-ad0b6a0df632" autoIncrement="false" autoIncrementSequenceName="Medicos_Med_Nombre_seq" defaultValue="" name="Med_Nombre" nullable="0" physicalName="Med_Nombre" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="0ce32c0e-acfc-463d-be26-49797cecad11" autoIncrement="false" autoIncrementSequenceName="Medicos_Med_NombreEspecialidad_seq" defaultValue="" name="Med_NombreEspecialidad" nullable="0" physicalName="Med_NombreEspecialidad" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="524fe7da-cbaf-46fb-a3c2-906d70282778" autoIncrement="false" autoIncrementSequenceName="Medicos_Med_AñosExperiencia_seq" defaultValue="" name="Med_AñosExperiencia" nullable="0" physicalName="Med_AñosExperiencia" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX6" populated="true" UUID="057dfa18-935c-437d-b776-469be4c0e5da" clustered="false" name="Medicos_pk" physicalName="Medicos_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC7" populated="true" UUID="1fe036e4-b3ed-4dca-bead-c264602b7a33" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="Med_Id" physicalName="Med_Id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB8" populated="true" UUID="8ed0c635-ca38-4491-892b-d2e5355b3bf4" name="Compañia_Farmaceutica" objectType="TABLE" physicalName="Compañia_Farmaceutica" >
+   <remarks></remarks>
+   <folder id="FOLTAB81" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL9" populated="true" UUID="771f659c-bc1f-43c9-a2be-50f6c97f749e" autoIncrement="true" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_Id_seq" defaultValue="" name="CompFarm_Id" nullable="0" physicalName="CompFarm_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL10" populated="true" UUID="463e5bdf-45c4-4000-b7b4-9e82719f98ef" autoIncrement="false" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_Nombre_seq" defaultValue="20" name="CompFarm_Nombre" nullable="0" physicalName="CompFarm_Nombre" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL11" populated="true" UUID="08fb4bc6-b934-47c9-b584-f5ee6ffa7a0e" autoIncrement="false" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_NumTelef_seq" defaultValue="" name="CompFarm_NumTelef" nullable="0" physicalName="CompFarm_NumTelef" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB82" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB84" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX12" populated="true" UUID="5284c82b-c393-492d-a43c-034fc2906864" clustered="false" name="Compañia_Farmaceutica_pk" physicalName="Compañia_Farmaceutica_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC13" populated="true" UUID="604785fc-2554-4e00-a2df-b54270d1cc55" ascendingOrDescending="UNSPECIFIED" column-ref="COL9" name="CompFarm_Id" physicalName="CompFarm_Id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB14" populated="true" UUID="54a33c00-56ed-4362-bfa4-604b9d06869f" name="Farmacia" objectType="TABLE" physicalName="Farmacia" >
+   <remarks></remarks>
+   <folder id="FOLTAB141" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL15" populated="true" UUID="c6dd01a3-3286-4f4e-b690-a9ecfe06b6e1" autoIncrement="true" autoIncrementSequenceName="Farmacia_Farm_Id_seq" defaultValue="" name="Farm_Id" nullable="0" physicalName="Farm_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="696b9109-9d3b-42ed-9a7d-b44a71afb33d" autoIncrement="false" autoIncrementSequenceName="Farmacia_Farm_Nombre_seq" defaultValue="" name="Farm_Nombre" nullable="0" physicalName="Farm_Nombre" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL17" populated="true" UUID="612a3d24-b1f2-423b-9fd2-55b4083205b7" autoIncrement="false" autoIncrementSequenceName="Farmacia_Farm_Direccion_seq" defaultValue="" name="Farm_Direccion" nullable="0" physicalName="Farm_Direccion" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL18" populated="true" UUID="2efb6274-5cfa-4633-98c8-5c7275f4f0b6" autoIncrement="false" autoIncrementSequenceName="Farmacia_Farm_NumTelef_seq" defaultValue="" name="Farm_NumTelef" nullable="0" physicalName="Farm_NumTelef" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB143" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB142" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB144" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX19" populated="true" UUID="65e4bf6f-599f-4e10-8808-e55e2912f8b8" clustered="false" name="Farmacia_pk" physicalName="Farmacia_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC20" populated="true" UUID="f9968480-4d13-4e71-a85f-0fd347f26b77" ascendingOrDescending="UNSPECIFIED" column-ref="COL15" name="Farm_Id" physicalName="Farm_Id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB21" populated="true" UUID="97736e73-1438-40d0-9fd5-ad17ad45742b" name="Ventas" objectType="TABLE" physicalName="Ventas" >
+   <remarks></remarks>
+   <folder id="FOLTAB211" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL22" populated="true" UUID="8ac7e1af-064c-4c04-aee3-d04f3b525a1a" autoIncrement="true" autoIncrementSequenceName="Ventas_Venta_Id_seq" defaultValue="" name="Venta_Id" nullable="0" physicalName="Venta_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL23" populated="true" UUID="511d8e55-5069-4dbc-9bb5-6a959e33f49e" autoIncrement="false" autoIncrementSequenceName="Farmacia_Farm_Id_seq" defaultValue="" name="Farm_Id" nullable="0" physicalName="Farm_Id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL24" populated="true" UUID="3203caec-0396-4575-8a82-ead40fc31d59" autoIncrement="false" autoIncrementSequenceName="Ventas_Ventas_Fecha_seq" defaultValue="" name="Ventas_Fecha" nullable="0" physicalName="Ventas_Fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL25" populated="true" UUID="07293721-0084-4f63-a5e5-241c8f9b961c" autoIncrement="false" autoIncrementSequenceName="Pacientes_Pac_Id_seq" defaultValue="" name="Pac_Id" nullable="1" physicalName="Pac_Id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB214" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX26" populated="true" UUID="523523ef-112d-4147-836c-87a69c664db8" clustered="false" name="Ventas_pk" physicalName="Ventas_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC27" populated="true" UUID="957c4fc8-141d-436f-94c9-6f04e0fb5096" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="Venta_Id" physicalName="Venta_Id" />
+     <index-column id="IDC28" populated="true" UUID="cabc6611-4481-4858-ad8d-657df08410af" ascendingOrDescending="UNSPECIFIED" column-ref="COL23" name="Farm_Id" physicalName="Farm_Id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB29" populated="true" UUID="37367fd5-2370-4e33-bd66-5437c837ed08" name="MedicamentoPorFarmacia" objectType="TABLE" physicalName="MedicamentoPorFarmacia" >
+   <remarks></remarks>
+   <folder id="FOLTAB291" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL30" populated="true" UUID="2881c1a9-df4b-4a30-bd25-8763175f06d3" autoIncrement="false" autoIncrementSequenceName="MedicamentoPorFarmacia_StockID_seq" defaultValue="" name="StockID" nullable="0" physicalName="StockID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL31" populated="true" UUID="ba4b5717-f11f-4390-8fd5-c35760359dbb" autoIncrement="false" autoIncrementSequenceName="Farmacia_Farm_Id_seq" defaultValue="" name="Farm_Id" nullable="0" physicalName="Farm_Id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL32" populated="true" UUID="24ad8ccf-75a0-441b-9720-36d1e7e3e3f0" autoIncrement="false" autoIncrementSequenceName="Medicamentos_Medicam_NombComercial_seq" defaultValue="" name="Medicam_NombComercial" nullable="0" physicalName="Medicam_NombComercial" precision="0" primaryKeySeq="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL33" populated="true" UUID="57af8bc0-0fdc-4601-b61d-228ad32e1cf7" autoIncrement="false" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_Id_seq" defaultValue="" name="CompFarm_Id" nullable="0" physicalName="CompFarm_Id" precision="0" primaryKeySeq="3" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL34" populated="true" UUID="985f78f8-2c8f-447e-8eab-7b41fbc16dcb" autoIncrement="false" autoIncrementSequenceName="MedicamentoPorFarmacia_MedicamentoPorFarmacia_Precio_seq" defaultValue="" name="MedicamentoPorFarmacia_Precio" nullable="0" physicalName="MedicamentoPorFarmacia_Precio" precision="0" primaryKeySeq="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL35" populated="true" UUID="953b1e31-75fe-41f5-98bc-74d17d7ea783" autoIncrement="false" autoIncrementSequenceName="MedicamentoPorFarmacia_MedicamentoPorFarmacia_Cantidad_seq" defaultValue="" name="MedicamentoPorFarmacia_Cantidad" nullable="0" physicalName="MedicamentoPorFarmacia_Cantidad" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB293" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB292" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB294" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX36" populated="true" UUID="69ddd01b-c19c-4a88-aa00-478e777a9c22" clustered="false" name="MedicamentoPorFarmacia_pk" physicalName="MedicamentoPorFarmacia_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC37" populated="true" UUID="c16fe588-9437-4f1e-a106-85a7f0357b28" ascendingOrDescending="UNSPECIFIED" column-ref="COL30" name="StockID" physicalName="StockID" />
+     <index-column id="IDC38" populated="true" UUID="4049b933-4042-456c-b018-301715a67721" ascendingOrDescending="UNSPECIFIED" column-ref="COL31" name="Farm_Id" physicalName="Farm_Id" />
+     <index-column id="IDC39" populated="true" UUID="3936b31e-2ca9-402d-8021-36ab6532b338" ascendingOrDescending="UNSPECIFIED" column-ref="COL32" name="Medicam_NombComercial" physicalName="Medicam_NombComercial" />
+     <index-column id="IDC40" populated="true" UUID="79fdd1b9-91f2-4e4b-b749-6abb83cf5ea9" ascendingOrDescending="UNSPECIFIED" column-ref="COL33" name="CompFarm_Id" physicalName="CompFarm_Id" />
+     <index-column id="IDC41" populated="true" UUID="ded36d00-e984-43b4-a381-b02e2c36befc" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="MedicamentoPorFarmacia_Precio" physicalName="MedicamentoPorFarmacia_Precio" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB42" populated="true" UUID="ed477711-220c-4323-a2d2-95bb92b24ad2" name="LineaVenta" objectType="TABLE" physicalName="LineaVenta" >
+   <remarks></remarks>
+   <folder id="FOLTAB421" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL43" populated="true" UUID="8cf47a8a-82a9-4d0c-b5c7-ff1f3d542cc1" autoIncrement="true" autoIncrementSequenceName="LineaVenta_LineaVenta_Id_seq" defaultValue="" name="LineaVenta_Id" nullable="0" physicalName="LineaVenta_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL44" populated="true" UUID="57274268-a308-4798-bd9e-3d60aa5e9d53" autoIncrement="false" autoIncrementSequenceName="Ventas_Venta_Id_seq" defaultValue="" name="Venta_Id" nullable="0" physicalName="Venta_Id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL45" populated="true" UUID="ef93b7ea-84cd-441f-84c7-1adf6b5e05d6" autoIncrement="false" autoIncrementSequenceName="MedicamentoPorFarmacia_StockID_seq" defaultValue="" name="StockID" nullable="0" physicalName="StockID" precision="0" primaryKeySeq="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL46" populated="true" UUID="c24c665e-def8-406e-b711-675d09ca54a7" autoIncrement="false" autoIncrementSequenceName="Medicamentos_Medicam_NombComercial_seq" defaultValue="" name="Medicam_NombComercial" nullable="0" physicalName="Medicam_NombComercial" precision="0" primaryKeySeq="3" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL47" populated="true" UUID="2dd59a14-d3cd-44c5-8d8d-6c41071e30e0" autoIncrement="false" autoIncrementSequenceName="MedicamentoPorFarmacia_MedicamentoPorFarmacia_Precio_seq" defaultValue="" name="MedicamentoPorFarmacia_Precio" nullable="0" physicalName="MedicamentoPorFarmacia_Precio" precision="0" primaryKeySeq="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL48" populated="true" UUID="8388505f-28d8-49d1-961a-9aacaaa6110d" autoIncrement="false" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_Id_seq" defaultValue="" name="CompFarm_Id" nullable="0" physicalName="CompFarm_Id" precision="0" primaryKeySeq="5" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL49" populated="true" UUID="b54e8e50-b4cf-4e3d-a7dd-8f4470bb0c34" autoIncrement="false" autoIncrementSequenceName="Farmacia_Farm_Id_seq" defaultValue="" name="Farm_Id" nullable="0" physicalName="Farm_Id" precision="0" primaryKeySeq="6" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL50" populated="true" UUID="2913e97e-de93-43b3-8313-3c9e6d8023fc" autoIncrement="false" autoIncrementSequenceName="LineaVenta_LineaVenta_CantVendida_seq" defaultValue="" name="LineaVenta_CantVendida" nullable="0" physicalName="LineaVenta_CantVendida" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB423" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB422" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB424" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX51" populated="true" UUID="985e69cc-c28c-4cd7-9238-2dd485693926" clustered="false" name="LineaVenta_pk" physicalName="LineaVenta_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC52" populated="true" UUID="07b1bfb3-eb44-4ce9-ba97-6cb60a614025" ascendingOrDescending="UNSPECIFIED" column-ref="COL43" name="LineaVenta_Id" physicalName="LineaVenta_Id" />
+     <index-column id="IDC53" populated="true" UUID="eabe0016-7e46-4ba1-81de-fd7c83981a89" ascendingOrDescending="UNSPECIFIED" column-ref="COL44" name="Venta_Id" physicalName="Venta_Id" />
+     <index-column id="IDC54" populated="true" UUID="772b5ec3-d354-49ef-9e2e-4ed46765a6b6" ascendingOrDescending="UNSPECIFIED" column-ref="COL45" name="StockID" physicalName="StockID" />
+     <index-column id="IDC55" populated="true" UUID="414c2053-8863-43cf-9a8b-e2665096e752" ascendingOrDescending="UNSPECIFIED" column-ref="COL46" name="Medicam_NombComercial" physicalName="Medicam_NombComercial" />
+     <index-column id="IDC56" populated="true" UUID="c739e627-ca87-40ed-91b1-7db72fd61f93" ascendingOrDescending="UNSPECIFIED" column-ref="COL47" name="MedicamentoPorFarmacia_Precio" physicalName="MedicamentoPorFarmacia_Precio" />
+     <index-column id="IDC57" populated="true" UUID="36222de6-f9a6-490e-b086-58f23af2c435" ascendingOrDescending="UNSPECIFIED" column-ref="COL48" name="CompFarm_Id" physicalName="CompFarm_Id" />
+     <index-column id="IDC58" populated="true" UUID="6fbe3553-299e-45b5-a576-d466a3dc4066" ascendingOrDescending="UNSPECIFIED" column-ref="COL49" name="Farm_Id" physicalName="Farm_Id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB59" populated="true" UUID="9bd47781-ccf3-4133-9176-4112b4b933b8" name="Receta" objectType="TABLE" physicalName="Receta" >
+   <remarks></remarks>
+   <folder id="FOLTAB591" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL60" populated="true" UUID="964e560b-da56-463f-9afb-0583b2c8ec2a" autoIncrement="false" autoIncrementSequenceName="Medicamentos_Medicam_NombComercial_seq" defaultValue="" name="Medicam_NombComercial" nullable="0" physicalName="Medicam_NombComercial" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL61" populated="true" UUID="54ac884e-d0a1-43bd-9df1-2215084a944f" autoIncrement="false" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_Id_seq" defaultValue="" name="CompFarm_Id" nullable="0" physicalName="CompFarm_Id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL62" populated="true" UUID="6381e041-a544-4b2e-885b-4a0e3e020ca2" autoIncrement="false" autoIncrementSequenceName="Medicos_Med_Id_seq" defaultValue="" name="Med_Id" nullable="0" physicalName="Med_Id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL63" populated="true" UUID="9b78d8e0-dd61-47cc-9c78-91be9b3b03ff" autoIncrement="false" autoIncrementSequenceName="Pacientes_Pac_Id_seq" defaultValue="" name="Pac_Id" nullable="0" physicalName="Pac_Id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL64" populated="true" UUID="8a9d8d29-e19a-48b6-a16c-8ce1bae6056e" autoIncrement="false" autoIncrementSequenceName="Receta_Receta_Fecha_seq" defaultValue="" name="Receta_Fecha" nullable="0" physicalName="Receta_Fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL65" populated="true" UUID="dbd2c3f5-5ce8-445e-b1d3-638a578fb0cc" autoIncrement="false" autoIncrementSequenceName="Receta_Receta_Cantidad_seq" defaultValue="" name="Receta_CantidadMedicamentos" nullable="0" physicalName="Receta_CantidadMedicamentos" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB593" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB592" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB594" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX66" populated="true" UUID="aa99d355-bac9-4acb-a44d-f0d130f08a77" clustered="false" name="Receta_pk" physicalName="Receta_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC67" populated="true" UUID="d44e231e-1b5a-41fb-b800-6e89ade4290b" ascendingOrDescending="UNSPECIFIED" column-ref="COL60" name="Medicam_NombComercial" physicalName="Medicam_NombComercial" />
+     <index-column id="IDC68" populated="true" UUID="a99a1d01-488e-48a9-bc00-dfc792ce14bd" ascendingOrDescending="UNSPECIFIED" column-ref="COL61" name="CompFarm_Id" physicalName="CompFarm_Id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB69" populated="true" UUID="a900e387-06b5-4afe-bca3-c5af0ac28068" name="Contrato" objectType="TABLE" physicalName="Contrato" >
+   <remarks></remarks>
+   <folder id="FOLTAB691" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL70" populated="true" UUID="b9da2c2b-2104-4922-b62c-66fb3d567a18" autoIncrement="false" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_Id_seq" defaultValue="" name="CompFarm_Id" nullable="0" physicalName="CompFarm_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL71" populated="true" UUID="7dcb7d20-1d21-4cfd-854a-96fdc9c5fc63" autoIncrement="false" autoIncrementSequenceName="Farmacia_Farm_Id_seq" defaultValue="" name="Farm_Id" nullable="0" physicalName="Farm_Id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL72" populated="true" UUID="68cd979e-ed95-4207-816e-0dae706fe32b" autoIncrement="false" autoIncrementSequenceName="Contrato_Contr_FechaIni_seq" defaultValue="" name="Contr_FechaIni" nullable="0" physicalName="Contr_FechaIni" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL73" populated="true" UUID="66473be1-a0db-4182-8eb3-51b38049dfc9" autoIncrement="false" autoIncrementSequenceName="Contrato_Contr_FechaFinal_seq" defaultValue="" name="Contr_FechaFinal" nullable="0" physicalName="Contr_FechaFinal" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL74" populated="true" UUID="1e491177-988a-43cc-a722-97573f5439b5" autoIncrement="false" autoIncrementSequenceName="Contrato_Contr_Descripcion_seq" defaultValue="" name="Contr_Descripcion" nullable="0" physicalName="Contr_Descripcion" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL75" populated="true" UUID="476805ae-0174-456a-9f78-d3a1f158cb55" autoIncrement="false" autoIncrementSequenceName="Contrato_Contr_NombSuperv_seq" defaultValue="" name="Contr_NombSuperv" nullable="0" physicalName="Contr_NombSuperv" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB693" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB692" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB694" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX76" populated="true" UUID="d1b5a09b-1ea1-45b2-9f52-cdd05d76c931" clustered="false" name="Contrato_pk" physicalName="Contrato_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC77" populated="true" UUID="b3150baf-d6b2-40c6-8268-cbd71a8a4873" ascendingOrDescending="UNSPECIFIED" column-ref="COL70" name="CompFarm_Id" physicalName="CompFarm_Id" />
+     <index-column id="IDC78" populated="true" UUID="bafbce03-50ff-4fcb-bc8f-c2f2b801df54" ascendingOrDescending="UNSPECIFIED" column-ref="COL71" name="Farm_Id" physicalName="Farm_Id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB79" populated="true" UUID="dcd4a513-02e4-49a6-8e93-1b054a2e95ff" name="Medicamentos" objectType="TABLE" physicalName="Medicamentos" >
+   <remarks></remarks>
+   <folder id="FOLTAB791" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL80" populated="true" UUID="7ba64521-686e-413e-a6b9-17e55a284f84" autoIncrement="false" autoIncrementSequenceName="Compañia_Farmaceutica_CompFarm_Id_seq" defaultValue="" name="CompFarm_Id" nullable="0" physicalName="CompFarm_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL81" populated="true" UUID="07151c25-6735-4e31-896a-51a4a66defc5" autoIncrement="false" autoIncrementSequenceName="Medicamentos_Medicam_NombComercial_seq" defaultValue="" name="Medicam_NombComercial" nullable="0" physicalName="Medicam_NombComercial" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL82" populated="true" UUID="3b609855-1ba0-440f-b2b2-5ae4b0f17c6d" autoIncrement="false" autoIncrementSequenceName="Medicamentos_Medicam_Formula_seq" defaultValue="" name="Medicam_Formula" nullable="0" physicalName="Medicam_Formula" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB793" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB792" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB794" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX83" populated="true" UUID="09000e32-501d-4435-bee7-2eee49c5fb1c" clustered="false" name="Medicamentos_pk" physicalName="Medicamentos_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC84" populated="true" UUID="3c362163-ad86-4acf-bab7-d6aa93351c37" ascendingOrDescending="UNSPECIFIED" column-ref="COL80" name="CompFarm_Id" physicalName="CompFarm_Id" />
+     <index-column id="IDC85" populated="true" UUID="83c80f7d-f739-4ded-b2fb-fe39119d75df" ascendingOrDescending="UNSPECIFIED" column-ref="COL81" name="Medicam_NombComercial" physicalName="Medicam_NombComercial" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB86" populated="true" UUID="9387c5f8-a63b-4731-b84c-70abd6092f2d" name="Pacientes" objectType="TABLE" physicalName="Pacientes" >
+   <remarks></remarks>
+   <folder id="FOLTAB861" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL87" populated="true" UUID="756978cc-d81f-435c-90f7-a769782fb1d7" autoIncrement="false" autoIncrementSequenceName="Pacientes_Pac_Id_seq" defaultValue="" name="Pac_Id" nullable="0" physicalName="Pac_Id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL88" populated="true" UUID="7681e3fb-79b8-4377-9dc5-dadf0ae5c16e" autoIncrement="false" autoIncrementSequenceName="Medicos_Med_Id_seq" defaultValue="" name="Med_Id" nullable="0" physicalName="Med_Id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL89" populated="true" UUID="032ed916-1765-42ed-8ac3-27338d25ac73" autoIncrement="false" autoIncrementSequenceName="Pacientes_Pac_Nombre_seq" defaultValue="" name="Pac_Nombre" nullable="0" physicalName="Pac_Nombre" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL90" populated="true" UUID="be76a638-8e35-4081-bb68-e7a87a3edbd0" autoIncrement="false" autoIncrementSequenceName="Pacientes_Pac_Direccion_seq" defaultValue="" name="Pac_Direccion" nullable="0" physicalName="Pac_Direccion" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL91" populated="true" UUID="b7ea8a20-0a21-4f60-a774-6a849514ef42" autoIncrement="false" autoIncrementSequenceName="Pacientes_Pac_Edad_seq" defaultValue="" name="Pac_Edad" nullable="0" physicalName="Pac_Edad" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB863" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB862" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB864" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX92" populated="true" UUID="a1cf411a-65f5-40a5-a2f8-e3e78415509e" clustered="false" name="Pacientes_pk" physicalName="Pacientes_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC93" populated="true" UUID="e174384a-ccd0-4868-816e-7082924d68ce" ascendingOrDescending="UNSPECIFIED" column-ref="COL87" name="Pac_Id" physicalName="Pac_Id" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL94" populated="true" UUID="860059a6-16e1-4c88-8f6e-f64b9cbce5db" deferrability="7" deleteRule="3" fk-table-ref="TAB86" fkCardinality="7" identifying="false" name="Medicos_Pacientes_fk1" physicalName="Medicos_Pacientes_fk1" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP95" populated="true" UUID="f2345bfc-6f3b-462a-a016-ffa409283e0c" fk-column-ref="COL88" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL96" populated="true" UUID="81383f25-0581-4e5d-b416-100e8e1ccd3d" deferrability="7" deleteRule="3" fk-table-ref="TAB59" fkCardinality="7" identifying="false" name="Medicos_Receta_fk" physicalName="Medicos_Receta_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP97" populated="true" UUID="a8f3b1a0-2a31-475a-bae6-4e770bf617c2" fk-column-ref="COL62" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL98" populated="true" UUID="40214806-7413-4f6d-8ed9-0e90689f4f05" deferrability="7" deleteRule="3" fk-table-ref="TAB69" fkCardinality="7" identifying="true" name="Compañia_Farmaceutica_Contrato_fk" physicalName="Compañia_Farmaceutica_Contrato_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP99" populated="true" UUID="8c2d6359-c07a-4f16-a397-3ffe81bc4e5b" fk-column-ref="COL70" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   </relationship>
+   <relationship id="REL100" populated="true" UUID="3d911cb6-c9eb-4943-8685-a5fe518dab76" deferrability="7" deleteRule="3" fk-table-ref="TAB79" fkCardinality="7" identifying="true" name="Compañia_Farmaceutica_Medicamentos_fk" physicalName="Compañia_Farmaceutica_Medicamentos_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP101" populated="true" UUID="773099e0-8d62-426e-871e-18896b79df48" fk-column-ref="COL80" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   </relationship>
+   <relationship id="REL102" populated="true" UUID="43c1a284-3727-4943-90b2-651fc5574bcd" deferrability="7" deleteRule="3" fk-table-ref="TAB29" fkCardinality="7" identifying="true" name="Farmacia_MedicamentoPorFarmacia_fk" physicalName="Farmacia_MedicamentoPorFarmacia_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP103" populated="true" UUID="8eb733f2-8836-402d-be5f-f2b786dc2efc" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
+   </relationship>
+   <relationship id="REL104" populated="true" UUID="42cc5447-b775-45f9-8025-181bfb07bfa1" deferrability="7" deleteRule="3" fk-table-ref="TAB69" fkCardinality="7" identifying="true" name="Farmacia_Contrato_fk" physicalName="Farmacia_Contrato_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP105" populated="true" UUID="0817a757-e320-4f9a-9e5f-e184ace25abe" fk-column-ref="COL71" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
+   </relationship>
+   <relationship id="REL106" populated="true" UUID="082bccab-5d1a-4cdd-aecc-154ae2cbfc3a" deferrability="7" deleteRule="3" fk-table-ref="TAB29" fkCardinality="7" identifying="true" name="Farmacia_MedicamentoPorFarmacia_fk1" physicalName="Farmacia_MedicamentoPorFarmacia_fk1" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP107" populated="true" UUID="95679071-8760-4796-9f1a-1fe13e68672c" fk-column-ref="COL31" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
+   </relationship>
+   <relationship id="REL108" populated="true" UUID="b0abfb8e-eea3-401b-929a-a22c0cdfe66e" deferrability="7" deleteRule="3" fk-table-ref="TAB21" fkCardinality="7" identifying="true" name="Farmacia_Ventas_fk" physicalName="Farmacia_Ventas_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP109" populated="true" UUID="da6621f2-e3de-4022-8d2f-cfc0ee69e272" fk-column-ref="COL23" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
+   </relationship>
+   <relationship id="REL110" populated="true" UUID="c5d03c0d-2e55-43a6-ae98-9927a2d1c7fd" deferrability="7" deleteRule="3" fk-table-ref="TAB42" fkCardinality="7" identifying="true" name="Ventas_LineaVenta_fk" physicalName="Ventas_LineaVenta_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP111" populated="true" UUID="700fe285-ee37-4e28-acee-eab204b46d84" fk-column-ref="COL44" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
+    <column-mapping id="CMP112" populated="true" UUID="71900f7f-add6-474b-973c-96c1767f8f11" fk-column-ref="COL49" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL23" />
+   </relationship>
+   <relationship id="REL113" populated="true" UUID="626dd42d-7e7b-480b-bf28-e6680a8420c6" deferrability="7" deleteRule="3" fk-table-ref="TAB42" fkCardinality="7" identifying="true" name="MedicamentoPorFarmacia_LineaVenta_fk" physicalName="MedicamentoPorFarmacia_LineaVenta_fk" pk-table-ref="TAB29" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP114" populated="true" UUID="fa37a233-693e-453d-9f69-6e3808c12102" fk-column-ref="COL46" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL32" />
+    <column-mapping id="CMP115" populated="true" UUID="6ee81fa0-87fe-4d9f-a6d4-5b6a8eb9105b" fk-column-ref="COL47" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
+    <column-mapping id="CMP116" populated="true" UUID="b02cbad0-260c-4056-bb8d-ba7bbb685b1b" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
+    <column-mapping id="CMP117" populated="true" UUID="5678ae51-1daa-4a86-a920-31c519f933d5" fk-column-ref="COL49" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL31" />
+    <column-mapping id="CMP118" populated="true" UUID="5e862807-1fd1-4e85-979f-4ea0245513df" fk-column-ref="COL45" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL30" />
+   </relationship>
+   <relationship id="REL119" populated="true" UUID="a3aaf5ee-3954-41a0-a671-f41a92e62fed" deferrability="7" deleteRule="3" fk-table-ref="TAB29" fkCardinality="7" identifying="true" name="Contrato_MedicamentoPorFarmacia_fk" physicalName="Contrato_MedicamentoPorFarmacia_fk" pk-table-ref="TAB69" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP120" populated="true" UUID="eeda8df3-4871-4163-b7fd-c320a47798d9" fk-column-ref="COL31" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL71" />
+    <column-mapping id="CMP121" populated="true" UUID="204d106f-c404-4001-852d-89d7141b8ef2" fk-column-ref="COL33" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL70" />
+   </relationship>
+   <relationship id="REL122" populated="true" UUID="aa86f1ca-5177-4d12-a7e8-b97d51d28096" deferrability="7" deleteRule="3" fk-table-ref="TAB59" fkCardinality="7" identifying="false" name="Medicamentos_Receta_fk" physicalName="Medicamentos_Receta_fk" pk-table-ref="TAB79" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP123" populated="true" UUID="73d72392-58fa-41fb-81e4-c3e8411b33a1" fk-column-ref="COL61" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL80" />
+    <column-mapping id="CMP124" populated="true" UUID="a55d021b-3f23-43cd-b218-b289b48b8d9f" fk-column-ref="COL60" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL81" />
+   </relationship>
+   <relationship id="REL125" populated="true" UUID="4358409e-1d2e-43b6-afc6-5155d88fe901" deferrability="7" deleteRule="3" fk-table-ref="TAB29" fkCardinality="7" identifying="true" name="Medicamentos_MedicamentoPorFarmacia_fk" physicalName="Medicamentos_MedicamentoPorFarmacia_fk" pk-table-ref="TAB79" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP126" populated="true" UUID="8e097eff-eb42-4f14-aff3-89d2707849ac" fk-column-ref="COL33" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL80" />
+    <column-mapping id="CMP127" populated="true" UUID="78a4669c-e5bb-41fa-a5a8-73842e1c0bf4" fk-column-ref="COL32" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL81" />
+   </relationship>
+   <relationship id="REL128" populated="true" UUID="fa0c52ab-d72a-4e5e-be3d-409126a9ee23" deferrability="7" deleteRule="3" fk-table-ref="TAB42" fkCardinality="7" identifying="false" name="Medicamentos_LineaVenta_fk" physicalName="Medicamentos_LineaVenta_fk" pk-table-ref="TAB79" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP129" populated="true" UUID="3adefd22-1aa0-4b60-b610-928cc9028c52" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL80" />
+    <column-mapping id="CMP130" populated="true" UUID="fa91705e-dc08-4385-8dc1-0488d342386e" fk-column-ref="COL46" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL81" />
+   </relationship>
+   <relationship id="REL131" populated="true" UUID="bf287ff5-9d81-4a4a-a16e-f608d7a636d2" deferrability="7" deleteRule="3" fk-table-ref="TAB21" fkCardinality="7" identifying="false" name="Pacientes_Ventas_fk" physicalName="Pacientes_Ventas_fk" pk-table-ref="TAB86" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP132" populated="true" UUID="25e09495-5716-46f5-ac86-082979386437" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL87" />
+   </relationship>
+   <relationship id="REL133" populated="true" UUID="d3b94839-b0d3-4431-8def-8dca91f2e05a" deferrability="7" deleteRule="3" fk-table-ref="TAB59" fkCardinality="7" identifying="false" name="Pacientes_Receta_fk" physicalName="Pacientes_Receta_fk" pk-table-ref="TAB86" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP134" populated="true" UUID="96083518-e93f-4a46-90b4-df31e9567c48" fk-column-ref="COL63" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL87" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="997" y="30" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB8" x="441" y="201" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB14" x="20" y="33" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB21" x="64" y="505" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB29" x="270" y="330" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB59" x="770" y="151" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB69" x="260" y="21" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB42" x="855" y="451" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB79" x="704" y="328" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB86" x="640" y="20" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL106" pkConnection="0.4973544973544973" fkConnection="0.2677165354330709" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL119" pkConnection="0.38425925925925924" fkConnection="0.1384083044982699" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL104" pkConnection="0.8823529411764706" fkConnection="0.25984251968503935" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL98" pkConnection="0.27230046948356806" fkConnection="0.41732283464566927" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="24"/>
+  <table-link relationship-ref="REL113" pkConnection="0.8031496062992126" fkConnection="0.19858156028368795" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL108" pkConnection="0.3386243386243386" fkConnection="0.09523809523809523" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL110" pkConnection="0.35294117647058826" fkConnection="0.3617021276595745" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL100" pkConnection="0.48826291079812206" fkConnection="0.15677966101694915" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL94" pkConnection="0.35294117647058826" fkConnection="0.8888888888888888" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL131" pkConnection="0.19230769230769232" fkConnection="0.8470588235294118" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="20"/>
+  <table-link relationship-ref="REL133" pkConnection="0.489010989010989" fkConnection="0.18110236220472442" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL122" pkConnection="0.7796610169491526" fkConnection="0.5114503816793893" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL125" pkConnection="0.8823529411764706" fkConnection="0.15748031496062992" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL128" pkConnection="0.4235294117647059" fkConnection="0.9653979238754326" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="129"/>
+  <table-link relationship-ref="REL96" pkConnection="0.26582278481012656" fkConnection="0.6692913385826772" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="20"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
