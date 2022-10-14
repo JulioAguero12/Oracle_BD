@@ -5,7 +5,7 @@ CREATE OR REPLACE PACKAGE receta_ops AS
         medicoID receta.medico_id%type, 
         pacienteID receta.paciente_id%type,
         nombreComercial receta.nombrecomercial%type, 
-        compañiaID receta.compañiaf_id%type, fecha receta.fecha%type,
+        compaÃ±iaID receta.compaÃ±iaf_id%type, fecha receta.fecha%type,
         cant receta.cantidad%type
     );
 
@@ -28,7 +28,7 @@ CREATE OR REPLACE PACKAGE BODY receta_ops AS
         medicoID receta.medico_id%type, 
         pacienteID receta.paciente_id%type,
         nombreComercial receta.nombrecomercial%type, 
-        compañiaID receta.compañiaf_id%type, fecha receta.fecha%type,
+        compaÃ±iaID receta.compaÃ±iaf_id%type, fecha receta.fecha%type,
         cant receta.cantidad%type
     ) AS
         noexistepaciente EXCEPTION;
@@ -37,8 +37,8 @@ CREATE OR REPLACE PACKAGE BODY receta_ops AS
         select count(*) into c from PACIENTE
         where PACIENTE_ID = pacienteID; 
         IF(c=1)THEN
-            insert into receta(MEDICO_ID,PACIENTE_ID,NOMBRECOMERCIAL,COMPAÑIAF_ID,FECHA,CANTIDAD)
-            values(medicoID, pacienteID, nombreComercial, compañiaID,fecha, cant);
+            insert into receta(MEDICO_ID,PACIENTE_ID,NOMBRECOMERCIAL,COMPAÃ‘IAF_ID,FECHA,CANTIDAD)
+            values(medicoID, pacienteID, nombreComercial, compaÃ±iaID,fecha, cant);
             dbms_output.put_line('Receta Registrada Correctamente'); 
         ELSE
             RAISE noexistepaciente;
