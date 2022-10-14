@@ -3,7 +3,7 @@ CREATE OR REPLACE PACKAGE stock_ops AS
     PROCEDURE nuevo_stock(
     s_farmid stock.Farmacia_ID%TYPE,
     s_nomCom stock.NombreComercial%TYPE,
-    s_compid stock.CompañiaF_id%TYPE,
+    s_compid stock.CompaÃ±iaF_id%TYPE,
     s_precio stock.precio%TYPE,
     s_cantidad stock.cantidad%TYPE
     );
@@ -27,7 +27,7 @@ CREATE OR REPLACE PACKAGE BODY stock_ops AS
     PROCEDURE nuevo_stock(
         s_farmid stock.Farmacia_ID%TYPE,
         s_nomCom stock.NombreComercial%TYPE,
-        s_compid stock.CompañiaF_id%TYPE,
+        s_compid stock.CompaÃ±iaF_id%TYPE,
         s_precio stock.precio%TYPE,
         s_cantidad stock.cantidad%TYPE
         )
@@ -38,7 +38,7 @@ CREATE OR REPLACE PACKAGE BODY stock_ops AS
         select count(*) into c from FARMACIA
         where FARMACIA_ID = s_farmid; 
         IF(c=1)THEN
-            INSERT INTO stock(Farmacia_ID,NombreComercial,CompañiaF_ID,precio, cantidad)
+            INSERT INTO stock(Farmacia_ID,NombreComercial,CompaÃ±iaF_ID,precio, cantidad)
             VALUES(s_farmid, s_nomCom, s_compid,s_precio, s_cantidad);
            dbms_output.put_line('Stock Registrado Correctamente'); 
         ELSE
